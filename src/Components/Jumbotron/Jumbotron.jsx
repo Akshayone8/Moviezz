@@ -16,7 +16,7 @@ const Jumbotron = () => {
   useEffect(() => {
     fetchMovieTrailer();
   }, []);
-  return <div>Jumbotron</div>;
+  return <div>Testing Jumbotron</div>;
 };
 
 export default Jumbotron;
