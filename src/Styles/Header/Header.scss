@@ -1,3 +1,6 @@
+.head-container {
+  background: linear-gradient(to bottom, black, transparent);
+}
 .header {
   display: flex;
   justify-content: space-between;
@@ -57,10 +60,18 @@
     .navbar-md {
       display: flex;
       width: 100%;
+      position: absolute;
       flex-direction: column;
       height: 300px;
+      top: 6%;
+      transition: all 0.3s ease-in-out, transform 0.3s ease-in-out;
       align-items: center;
       justify-content: space-around;
+      background-color: #fff;
+      z-index: 2;
+      a {
+        color: #000;
+      }
     }
   }
 }

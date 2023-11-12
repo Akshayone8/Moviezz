@@ -10,31 +10,34 @@ const Header = () => {
   const dispatch = useDispatch();
   const isMenuOpen = useSelector((store) => store.app.hamburgerState);
   const toggleHamburger = () => {
+    console.log("I called")
     dispatch(triggerHamburger());
   };
   return (
-    <Container fixed>
-      <header className="header">
-        <div className="logo-container">
-          <h2 className="logo">Moviezz</h2>
-          <MenuIcon className="hamburger-icon" onClick={toggleHamburger} />
-        </div>
-        <div className="navbar-lg">
-          <Link to="/">Home</Link>
-          <Link to="/movies">Movies</Link>
-          <Link to="/series">Series</Link>
-          <Link to="/favorite">Favorite</Link>
-        </div>
-        {isMenuOpen && (
-          <div className="navbar-md">
+    <div className="head-container">
+      <Container fixed>
+        <header className="header">
+          <div className="logo-container">
+            <h2 className="logo">Moviezz</h2>
+            <MenuIcon className="hamburger-icon" onClick={toggleHamburger} />
+          </div>
+          <div className="navbar-lg">
             <Link to="/">Home</Link>
             <Link to="/movies">Movies</Link>
             <Link to="/series">Series</Link>
             <Link to="/favorite">Favorite</Link>
           </div>
-        )}
-      </header>
-    </Container>
+          {isMenuOpen && (
+            <div className="navbar-md">
+              <Link to="/">Home</Link>
+              <Link to="/movies">Movies</Link>
+              <Link to="/series">Series</Link>
+              <Link to="/favorite">Favorite</Link>
+            </div>
+          )}
+        </header>
+      </Container>
+    </div>
   );
 };
 

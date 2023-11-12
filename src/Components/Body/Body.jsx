@@ -1,11 +1,15 @@
 import React from "react";
-import Jumbotron from "../Jumbotron/Jumbotron";
+
+import Movies from "../Movies/Movies";
+import MainContainer from "../MainContainer/MainContainer";
+import SecondaryContainer from "../SecondaryContainer/SecondaryContainer";
 
 const Body = () => {
   return (
-    <div>
-      <Jumbotron />
-    </div>
+    <>
+      <MainContainer />
+      <SecondaryContainer />
+    </>
   );
 };
 
