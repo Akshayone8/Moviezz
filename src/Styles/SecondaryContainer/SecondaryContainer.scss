@@ -1,0 +1,14 @@
+.secondary-container {
+  .subheading {
+    color: #2ce676;
+    font-size: 40px;
+    text-decoration: underline;
+    position: absolute;
+    bottom: 10px;
+  }
+  .moviecardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}

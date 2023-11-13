@@ -11,6 +11,7 @@ const usePopularMovie = () => {
       options
     );
     const json = await data.json();
+
     dispatch(fetchPopularMovie(json.results));
   };
   useEffect(() => {

@@ -5,6 +5,7 @@ import Body from "./Components/Body/Body.jsx";
 import Movies from "./Components/Movies/Movies.jsx";
 import Series from "./Components/Series/Series.jsx";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import MovieDetail from "./Components/MovieDetail/MovieDetail.jsx";
 
 const appRouter = createBrowserRouter([
   {
@@ -16,7 +17,10 @@ const appRouter = createBrowserRouter([
         path: "/",
         element: <Body />,
       },
-
+      {
+        path: "/movie-detail/:movieId",
+        element: <MovieDetail />,
+      },
       {
         path: "/movies",
         element: <Movies />,
