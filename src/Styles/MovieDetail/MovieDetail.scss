@@ -16,4 +16,56 @@
         rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
     }
   }
+  .information-section {
+    margin-left: 30%;
+  }
+  .heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+  }
+  .summary {
+    color: #fff;
+  }
+  .movie-stats {
+    color: #2ce676;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .trailer-btn {
+    color: #2ce676;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .moviesection {
+    .movie-herosection {
+      display: none;
+    }
+    .detail-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .poster-image {
+        position: relative;
+        top: 0;
+      }
+      .information-section {
+        margin: 0 10%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .moviesection {
+    .movie-stats {
+      font-size: 15px;
+      flex-direction: column;
+      align-items: normal;
+    }
+  }
 }

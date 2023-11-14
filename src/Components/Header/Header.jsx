@@ -10,7 +10,6 @@ const Header = () => {
   const dispatch = useDispatch();
   const isMenuOpen = useSelector((store) => store.app.hamburgerState);
   const toggleHamburger = () => {
-    console.log("I called")
     dispatch(triggerHamburger());
   };
   return (

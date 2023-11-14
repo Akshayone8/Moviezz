@@ -7,5 +7,6 @@ export const options = {
   },
 };
 
+export const YOUTUBE_LINK = "https://www.youtube.com/watch?v=";
 export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500";
 export const IMG_CDN_URL_COVER = "https://images.tmdb.org/t/p/w1280";
