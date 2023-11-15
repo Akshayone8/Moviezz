@@ -3,13 +3,19 @@ import { Grid, Paper } from "@mui/material";
 import "../../Styles/MovieCards/MovieCards.scss";
 import { IMG_CDN_URL } from "../../utils/constants";
 
-const MovieCards = ({ title, overview, poster_path, vote_average }) => {
+const MovieCards = ({
+  title,
+  overview,
+  poster_path,
+  vote_average,
+  original_name,
+}) => {
   return (
     <div className="card">
       <img alt={title} src={IMG_CDN_URL + poster_path} />
 
       <div className="card-details">
-        <h4>{title}</h4>
+        <h4>{title ? title : original_name}</h4>
         {Math.floor(vote_average) > 5 ? (
           <span className="tag-green">{Math.floor(vote_average)}</span>
         ) : (

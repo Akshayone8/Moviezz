@@ -22,6 +22,10 @@ const appRouter = createBrowserRouter([
         element: <MovieDetail />,
       },
       {
+        path: "/series-detail/:movieId",
+        element: <MovieDetail />,
+      },
+      {
         path: "/movies",
         element: <Movies />,
       },

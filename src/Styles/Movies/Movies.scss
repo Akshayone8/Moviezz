@@ -1,0 +1,23 @@
+.moviecardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  button {
+    color: #2ce676;
+  }
+  .Mui-selected {
+    background-color: #e50914 !important;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .movieHeader {
+    text-align: center;
+  }
+}

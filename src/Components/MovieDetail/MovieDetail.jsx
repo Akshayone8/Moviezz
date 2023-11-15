@@ -22,10 +22,17 @@ const MovieDetail = () => {
 
   useMovieDetail(movieId);
   const getMovieDetails = useSelector((store) => store.movie.movieDetail);
-  console.log(getMovieDetails);
+
   if (!getMovieDetails || !getTrailerLink) return <Shimmer />;
-  const { backdrop_path, title, poster_path, overview, runtime, vote_average } =
-    getMovieDetails;
+  const {
+    backdrop_path,
+    title,
+    poster_path,
+    overview,
+    runtime,
+    vote_average,
+    original_name,
+  } = getMovieDetails;
   return (
     <div className="moviesection">
       <img
@@ -43,7 +50,7 @@ const MovieDetail = () => {
 
           <div className="information-section">
             <div className="heading">
-              <h2>{title}</h2>
+              <h2>{title ? title : original_name}</h2>
               <BookmarkBorderIcon />
             </div>
             <section className="summary">
