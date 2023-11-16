@@ -16,7 +16,7 @@ const Series = () => {
   };
   usepopularSeries(page);
   const populateSeries = useSelector((store) => store.movie.popularSeries);
-  console.log(populateSeries);
+
   if (!populateSeries) return <Shimmer />;
   return (
     <Container>

@@ -3,11 +3,12 @@ import VideoBackground from "../VideoBackground/VideoBackground";
 import VideoTitle from "../VideoTitle/VideoTitle";
 import { useSelector } from "react-redux";
 import "../../Styles/MainContainer/MainContainer.scss";
+import Shimmer from "../Shimmer/Shimmer";
 
 const MainContainer = () => {
   const videoTrailer = useSelector((store) => store.movie.popularMovie);
 
-  if (!videoTrailer) return null;
+  if (!videoTrailer) return <Shimmer />;
 
   const { original_title, overview, id } = videoTrailer[0];
 

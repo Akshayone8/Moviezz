@@ -1,60 +1,65 @@
-import React from "react";
 import { useParams } from "react-router-dom";
-import useMovieDetail from "../../hooks/useMovieDetail";
+import useSeriesDetail from "../../hooks/useSeriesDetail";
 import { useSelector } from "react-redux";
+import Shimmer from "../Shimmer/Shimmer";
+import "../../Styles/MovieDetail/MovieDetail.scss";
 import {
   IMG_CDN_URL_COVER,
   IMG_CDN_URL,
   YOUTUBE_LINK,
 } from "../../utils/constants";
-import "../../Styles/MovieDetail/MovieDetail.scss";
 import { Button, Container } from "@mui/material";
-import Shimmer from "../Shimmer/Shimmer";
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
-import useMovieTrailer from "../../hooks/useMovieTrailer";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 import YouTubeIcon from "@mui/icons-material/YouTube";
+import useMovieTrailer from "../../hooks/useMovieTrailer";
 
-const MovieDetail = () => {
-  const { movieId } = useParams();
-  useMovieTrailer(movieId, "movie");
+const SeriesDetail = () => {
+  const { seriesId } = useParams();
+  useMovieTrailer(seriesId, "tv");
   const getTrailerLink = useSelector((store) => store.movie.movieTrailer);
 
-  useMovieDetail(movieId);
-  const getMovieDetails = useSelector((store) => store.movie.movieDetail);
+  useSeriesDetail(seriesId);
+  const getSeriesDetails = useSelector((store) => store.movie.seriesDetail);
 
-  if (!getMovieDetails || !getTrailerLink) return <Shimmer />;
-  const { backdrop_path, title, poster_path, overview, runtime, vote_average } =
-    getMovieDetails;
+  if (!getSeriesDetails) return <Shimmer />;
+  const {
+    backdrop_path,
+    name,
+    poster_path,
+    overview,
+    number_of_seasons,
+    vote_average,
+  } = getSeriesDetails;
   return (
     <div className="moviesection">
       <img
-        alt={title}
+        alt={name}
         src={IMG_CDN_URL_COVER + backdrop_path}
         className="movie-herosection"
       />
       <Container>
         <div className="detail-section">
           <img
-            alt={title}
+            alt={name}
             src={IMG_CDN_URL + poster_path}
             className="poster-image"
           />
 
           <div className="information-section">
             <div className="heading">
-              <h2>{title}</h2>
+              <h2>{name}</h2>
               <BookmarkBorderIcon />
             </div>
             <section className="summary">
-              <h3 className="summary-title">Summary:</h3>
+              <h3 className="summary-name">Summary:</h3>
               <p className="summary-content">{overview}</p>
             </section>
             <section className="movie-stats">
               <h2>
-                <AccessTimeIcon />
-                {runtime} mins
+                <b>Seasons - </b>
+                {number_of_seasons}
               </h2>
 
               <h2>
@@ -62,15 +67,17 @@ const MovieDetail = () => {
                 {Math.floor(vote_average)}
               </h2>
 
-              <Button
-                href={YOUTUBE_LINK + getTrailerLink.key}
-                target="_blank"
-                variant="outlined"
-                className="trailer-btn"
-              >
-                Trailer
-                <YouTubeIcon />
-              </Button>
+              {getTrailerLink ? (
+                <Button
+                  href={YOUTUBE_LINK + getTrailerLink.key}
+                  target="_blank"
+                  variant="outlined"
+                  className="trailer-btn"
+                >
+                  Trailer
+                  <YouTubeIcon />
+                </Button>
+              ) : null}
             </section>
           </div>
         </div>
@@ -79,4 +86,4 @@ const MovieDetail = () => {
   );
 };
 
-export default MovieDetail;
+export default SeriesDetail;
