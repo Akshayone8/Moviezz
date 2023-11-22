@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "../../Styles/Movies/Movies.scss";
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import { Link } from "react-router-dom";
 import usepopularSeries from "../../hooks/usepopularSeries";

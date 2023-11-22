@@ -7,6 +7,7 @@ import Series from "./Components/Series/Series.jsx";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import MovieDetail from "./Components/MovieDetail/MovieDetail.jsx";
 import SeriesDetail from "./Components/SeriesDetail/SeriesDetail.jsx";
+import Favorite from "./Components/Favorite/Favorite.jsx";
 
 const appRouter = createBrowserRouter([
   {
@@ -36,7 +37,7 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/favorite",
-        element: <Series />,
+        element: <Favorite />,
       },
     ],
   },

@@ -1,6 +1,6 @@
 import { Container, Pagination } from "@mui/material";
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";
-import "../../Styles/Movies/Movies.scss";
+
 import { useDispatch, useSelector } from "react-redux";
 import Shimmer from "../Shimmer/Shimmer";
 import MovieCards from "../MovieCards/MovieCards";

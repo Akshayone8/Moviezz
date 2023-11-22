@@ -1,5 +1,4 @@
 import React from "react";
-import "../../Styles/SecondaryContainer/SecondaryContainer.scss";
 import usePopularMovie from "../../hooks/usePopularMovie";
 import { Container, Grid } from "@mui/material";
 import WhatshotIcon from "@mui/icons-material/Whatshot";

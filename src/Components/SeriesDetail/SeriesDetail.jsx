@@ -2,7 +2,6 @@ import { useParams } from "react-router-dom";
 import useSeriesDetail from "../../hooks/useSeriesDetail";
 import { useSelector } from "react-redux";
 import Shimmer from "../Shimmer/Shimmer";
-import "../../Styles/MovieDetail/MovieDetail.scss";
 import {
   IMG_CDN_URL_COVER,
   IMG_CDN_URL,
@@ -64,7 +63,7 @@ const SeriesDetail = () => {
 
               <h2>
                 <StarBorderIcon />
-                {Math.floor(vote_average)}
+                {Math.floor(vote_average)} / 10
               </h2>
 
               {getTrailerLink ? (

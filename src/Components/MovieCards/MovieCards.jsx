@@ -1,6 +1,4 @@
 import React from "react";
-import { Grid, Paper } from "@mui/material";
-import "../../Styles/MovieCards/MovieCards.scss";
 import { IMG_CDN_URL } from "../../utils/constants";
 
 const MovieCards = ({

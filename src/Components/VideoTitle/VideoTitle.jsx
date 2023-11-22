@@ -1,5 +1,4 @@
 import { Container } from "@mui/material";
-import "../../Styles/VideoTitle/VideoTitle.scss";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 

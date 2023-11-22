@@ -1,5 +1,4 @@
 import { Container } from "@mui/material";
-import "../../Styles/Footer/Footer.scss";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { Link } from "react-router-dom";

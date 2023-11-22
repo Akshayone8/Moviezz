@@ -1,5 +1,4 @@
 import React from "react";
-import "../../Styles/Header/Header.scss";
 import { Link } from "react-router-dom";
 import { Container } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";

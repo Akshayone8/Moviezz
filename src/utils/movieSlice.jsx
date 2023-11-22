@@ -9,6 +9,7 @@ const movieSlice = createSlice({
     movieDetail: null,
     popularSeries: null,
     seriesDetail: null,
+    bookMarkDetail: [],
   },
   reducers: {
     fetchMovieTrailer: (state, action) => {
@@ -29,6 +30,9 @@ const movieSlice = createSlice({
     fetchSereisDetail: (state, action) => {
       state.seriesDetail = action.payload;
     },
+    fetchBookMark: (state, action) => {
+      state.bookMarkDetail = action.payload;
+    },
   },
 });
 
@@ -40,5 +44,6 @@ export const {
   handlePagination,
   fetchPopularSeries,
   fetchSereisDetail,
+  fetchBookMark,
 } = movieSlice.actions;
 export default movieSlice.reducer;

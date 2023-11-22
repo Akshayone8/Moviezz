@@ -1,5 +1,4 @@
 import React from "react";
-import "../../Styles/VideoBackground/VideoBackground.scss";
 import useMovieTrailer from "../../hooks/useMovieTrailer";
 import { useSelector } from "react-redux";
 

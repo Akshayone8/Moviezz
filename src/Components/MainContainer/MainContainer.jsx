@@ -2,7 +2,6 @@ import React from "react";
 import VideoBackground from "../VideoBackground/VideoBackground";
 import VideoTitle from "../VideoTitle/VideoTitle";
 import { useSelector } from "react-redux";
-import "../../Styles/MainContainer/MainContainer.scss";
 import Shimmer from "../Shimmer/Shimmer";
 
 const MainContainer = () => {

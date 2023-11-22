@@ -12,3 +12,16 @@
     justify-content: space-around;
   }
 }
+
+@media only screen and (max-width: 1025px) {
+  .secondary-container {
+    .subheading {
+      position: relative;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .secondary-container {
+    text-align: center;
+  }
+}

@@ -24,6 +24,13 @@
     justify-content: space-between;
     align-items: center;
     color: #fff;
+
+    .active {
+      background-color: red;
+    }
+    .inactive {
+      background-color: #2ce676;
+    }
   }
   .summary {
     color: #fff;
